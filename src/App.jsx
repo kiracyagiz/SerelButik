@@ -1,13 +1,12 @@
+import React from 'react';
+import Shop from '../components/Shop';
 
 function App() {
-
   return (
-    <>
-      <div>
-        ADSJDSALKASJLKSADJLDSA
-      </div>
-    </>
-  )
+   <>
+   <Shop/>
+   </>
+  );
 }
 
-export default App
+export default App;
