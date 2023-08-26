@@ -1,12 +1,17 @@
-import React from 'react';
-import Shop from '../components/Shop';
+import React, { useState } from 'react';
+import wommen from '../images/wommen.jpg';
+import Content from './components/Content';
+import Navbar from './components/Navbar';
 
-function App() {
+const App = () => {
   return (
-   <>
-   <Shop/>
-   </>
+    <>
+      <div>
+        <Navbar/>
+        <Content/>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
