@@ -6,7 +6,11 @@ module.exports = {
     theme: {
       extend: {
         colors:{
-          primary: '#D8DDE0'
+          primary: '#FCFCFC'
+        }
+        ,
+        fontFamily:{
+          'custom' : ['Nunito','sans']
         }
       },
     },

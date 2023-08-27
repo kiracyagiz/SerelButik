@@ -1,65 +1,45 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import women from "../../images/sagwomen.jpg";
-import sliderSecond from '../../images/sliderSecond.jpg'
-import sliderThird from '../../images/sliderThird.jpg'
+import Card from "./Card";
+import bikini1 from "../../images/bikini2.png";
+import bikini2 from "../../images/bikini3.png";
+import bikini3 from "../../images/bikini4.png";
 
 const Content = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
+  const cards = [
+    {
+      id: 0,
+      name: "LÂL SİYAH ",
+      image: bikini1,
+    },
+    {
+      id: 1,
+      name: "LÂL SARI",
+      image: bikini2,
+    },
+    {
+      id: 2,
+      name: "LÂL MAVİ",
+      image: bikini3,
+    },
+  ];
   return (
-    <div className="overflow-hidden">
-      <Slider {...settings}>
-        <div className="!flex p-12 overflow-hidden items-center gap-x-12">
-          <div >
-          <h1 className="mb-4 text-xl font-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, maxime?</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-            veritatis at magnam quis eveniet! Minima alias sequi tenetur velit
-            incidunt, nihil debitis nostrum in quidem et ullam! Cupiditate
-            obcaecati ipsum neque consectetur, iure sunt voluptate temporibus
-            consequatur ipsam reprehenderit doloribus asperiores sequi aperiam.
-            Aliquid fuga expedita ipsa optio eaque quaerat?
-          </p>
-          </div>
-          <img src={women} className="w-[590px] rounded-xl shadow-2xl" alt="" />
-        </div>
-        <div className="!flex p-12 overflow-hidden items-center gap-x-12">
-          <div >
-          <h1 className="mb-4 text-xl font-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, maxime?</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-            veritatis at magnam quis eveniet! Minima alias sequi tenetur velit
-            incidunt, nihil debitis nostrum in quidem et ullam! Cupiditate
-            obcaecati ipsum neque consectetur, iure sunt voluptate temporibus
-            consequatur ipsam reprehenderit doloribus asperiores sequi aperiam.
-            Aliquid fuga expedita ipsa optio eaque quaerat?
-          </p>
-          </div>
-          <img src={sliderSecond} className="w-[590px] rounded-xl shadow-2xl" alt="" />
-        </div>
-        <div className="!flex p-12 overflow-hidden items-center gap-x-12">
-          <div >
-          <h1 className="mb-4 text-xl font-bold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, maxime?</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-            veritatis at magnam quis eveniet! Minima alias sequi tenetur velit
-            incidunt, nihil debitis nostrum in quidem et ullam! Cupiditate
-            obcaecati ipsum neque consectetur, iure sunt voluptate temporibus
-            consequatur ipsam reprehenderit doloribus asperiores sequi aperiam.
-            Aliquid fuga expedita ipsa optio eaque quaerat?
-          </p>
-          </div>
-          <img src={sliderThird} className="w-[590px] rounded-xl shadow-2xl" alt="" />
-        </div>
-      </Slider>
+    <div className="flex justify-between  m-12 p-12 h-fit">
+      <div className="flex flex-col gap-y-4">
+        <h1 className="text-2xl">YENİ</h1>
+        <h1 className="text-2xl bg-yellow-800 max-w-fit py-1 px-4 text-white">
+          ÜRÜNLERİMİZ
+        </h1>
+        <blockquote class="text-2xl font-semibold italic text-center text-slate-900 max-w-sm mt-14">
+          <p className="mb-2">Yeni Ürünlerimiz</p>
+          <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-yellow-800 relative inline-block">
+            <span class="relative text-white ">İNDİRİMLİ </span>
+          </span>
+          <p className="mt-2">Fiyatlarla Hizmetinizde Olacaktır</p>
+        </blockquote>
+      </div>
+
+      <div className="flex gap-x-8 ">
+        <Card cards={cards} />
+      </div>
     </div>
   );
 };
