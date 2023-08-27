@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../../images/logo.png";
-import womensBg from "../../images/womens.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -15,15 +14,24 @@ const Navbar = () => {
     slidesToScroll: 1,
   };
 
-  const bgStyle = {
-    backgroundImage: `url(${womensBg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 640); // Set the breakpoint width as per your needs
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <div>
-        <div className="h-[80vh] " style={bgStyle}>
+        <div
+          className={`h-[80vh] ${isSmallScreen ? "" : "bg-[url(../../images/womens.jpg)] bg-cover bg-center"}`}
+        >
           <div className="flex items-center justify-center gap-x-8">
             <p>Anasayfa</p>
             <p>Hakkımızda</p>
@@ -34,7 +42,7 @@ const Navbar = () => {
         </div>
         <div className="overflow-hidden  absolute  right-0 left-0 bottom-32 w-[600px] m-auto">
           <Slider {...settings}>
-            <div className="p-12 flex justify-center items-center">
+          <div className="p-12 flex justify-center items-center">
               <div className="bg- rounded-xl bg-gray-200 shadow-2xl flex gap-x-12  p-8">
                 <div >
                   <h1 className="text-lg text-md text-bold font-custom">Lorem ipsum dolor sit.</h1>
