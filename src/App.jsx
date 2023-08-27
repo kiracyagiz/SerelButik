@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import wommen from '../images/wommen.jpg';
-import Content from './components/Content';
+import Extra from './components/Extra';
 import Navbar from './components/Navbar';
-import SecondContent from './components/SecondContent';
+import Slider from './components/SliderComp';
 
 const App = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return (
     <>
-      <div>
+      <div className='h- overflow-hidden'>
         <Navbar/>
-        <Content/>
+        <Slider/>
+        <Extra/>
       </div>
     </>
   );
