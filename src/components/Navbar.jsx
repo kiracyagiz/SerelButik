@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="flex items-center justify-between bg-gray-100 p-4">
       <div className="flex items-center">
         <img src={logo} className="w-12" alt="Logo" />
-        <h1 className="ml-2 text-xl font-bold">SEREL BUTİK</h1>
+        <h1 className="ml-2 text-xl font-bold ">SEREL BUTİK</h1>
       </div>
       <div className="hidden md:flex space-x-4 text-center items-center  ">
         <a href="#" className="hover:text-blue-500 flex gap-x-4"><MdHome size={20} /> Anasayfa</a>

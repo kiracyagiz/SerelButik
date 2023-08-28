@@ -3,11 +3,11 @@ import women from '../../images/women.jpg'
 
 const About = () => {
   return (
-    <section className="bg-gray-100 py-16">
-      <div className="container mx-auto">
+    <section className=" py-16">
+      <div className="container mx-auto ">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0">
-            <div className="relative">
+          <div className="md:w-1/2 md:pr-8 mb-8 md:mb-0 ">
+            <div className="relative bg">
               <img
                 src={women}
                 alt="About Us"
@@ -18,7 +18,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 p-8 mr-0  md:mr-8 bg-white rounded-lg shadow-lg">
+          <div className="md:w-1/2 p-8 mr-0  md:mr-8 bg-gray-50 rounded-lg shadow-lg">
             <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 mb-4">
               Hakkımızda
             </h2>

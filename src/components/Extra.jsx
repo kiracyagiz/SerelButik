@@ -5,7 +5,7 @@ import {RiMoneyDollarCircleLine} from 'react-icons/ri'
 import {TbDiscount2Off} from 'react-icons/tb'
 const Extra = () => {
   return (
-    <div className='flex flex-col gap-y-8 md:flex-row justify-between p-8  md:p-12 mt-8 gap-x-6 mx-0  md:mx-24 h-fit'>
+    <div className='flex flex-col   gap-y-8 md:flex-row justify-between p-8  md:p-12 mt-8 gap-x-6 mx-0  md:mx-24 h-fit'>
         <div className='flex gap-x-8'>
             <FaShippingFast size={50}/>
             <div>
