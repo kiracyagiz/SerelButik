@@ -21,7 +21,7 @@ const SliderComp = () => {
   const slides = [
     {
       image: women,
-      bgColor: "bg-pink-200",
+      bgColor: "bg-blue-200",
       title: "Özel İlk Slayt Başlığı",
       content: "Slayt içeriği burada.",
     },
@@ -33,7 +33,7 @@ const SliderComp = () => {
     },
     {
       image: womenthird,
-      bgColor: "bg-purple-200",
+      bgColor: "bg-blue-200",
       title: "Özel Üçüncü Slayt Başlığı",
       content: "Slayt içeriği burada.",
     },
