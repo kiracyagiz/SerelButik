@@ -1,6 +1,8 @@
+import Card from './components/Card';
 import Extra from './components/Extra';
 import Navbar from './components/Navbar';
 import Slider from './components/SliderComp';
+import bikini from '../images/bikini1.jpg'
 
 const App = () => {
   const settings = {
@@ -16,6 +18,7 @@ const App = () => {
         <Navbar/>
         <Slider/>
         <Extra/>
+        <Card bikini={bikini}/>
       </div>
     </>
   );

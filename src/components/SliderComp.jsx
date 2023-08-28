@@ -6,7 +6,6 @@ import women from "../../images/sec.png";
 import womensec from '../../images/sec3.png'
 import womenthird from '../../images/sec2.png'
 
-
 const SliderComp = () => {
   const settings = {
     dots: true,
@@ -14,55 +13,58 @@ const SliderComp = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
   };
+
+  const slides = [
+    {
+      image: women,
+      bgColor: "bg-pink-200",
+      title: "Özel İlk Slayt Başlığı",
+      content: "Buraya slayt içeriğini ekleyin.",
+    },
+    {
+      image: womensec,
+      bgColor: "bg-blue-200",
+      title: "Özel İkinci Slayt Başlığı",
+      content: "Buraya slayt içeriğini ekleyin.",
+    },
+    {
+      image: womenthird,
+      bgColor: "bg-purple-200",
+      title: "Özel Üçüncü Slayt Başlığı",
+      content: "Buraya slayt içeriğini ekleyin.",
+    },
+  ];
+
   return (
-    <div>
+    <div className="relative">
       <Slider {...settings}>
-        <div className="!flex flex-col md:flex-row justify-between   p-12 bg-pink-200 w-[80vh]">
-          <div className="!flex flex-col gap-y-8 p-12 mt-0 md:mt-20">
-            <h1 className="text-4xl ">Lorem ipsum dolor sit amet.</h1>
-            <p className="max-w-sm md:max-w-lg">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-              sint laudantium minus corrupti consequatur, delectus amet quia
-              sapiente porro ipsam quo obcaecati quos ad rerum voluptatum
-              molestias eum quam perferendis voluptates consectetur placeat
-              nesciunt saepe necessitatibus ullam. Incidunt libero consequuntur
-              commodi similique esse ipsum voluptas, repudiandae numquam beatae
-              fugit minima?
-            </p>
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`!flex flex-col gap-y-8 justify-center gap-x-16 md:flex-row p-12 w-[80vh] h-[70vh] ${slide.bgColor}`}
+          >
+            <div className="w-[300px] md:w-[500px] rounded-lg shadow-md overflow-hidden mx-8 md:mx-0">
+              <img
+                src={slide.image}
+                className="w-full h-auto object-cover"
+                alt=""
+              />
+            </div>
+            <div className="md:max-w-md">
+              <h1 className="text-3xl md:text-4xl font-semibold mb-4">
+                {slide.title}
+              </h1>
+              <p className="text-sm md:text-base mb-6">{slide.content}</p>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+                Daha Fazla Bilgi
+              </button>
+            </div>
           </div>
-          <img src={women} className="ml-20 md:ml-0 w-[150px] md:w-[300px] object-cover mr-0 md:mr-20 " alt="" />
-        </div>
-        <div className="!flex flex-col md:flex-row justify-between  p-12 bg-blue-200 w-[80vh]">
-          <div className="!flex flex-col gap-y-8 p-12 mt-0 md:mt-20">
-            <h1 className="text-4xl ">Lorem ipsum dolor sit amet.</h1>
-            <p className="max-w-sm md:max-w-lg">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-              sint laudantium minus corrupti consequatur, delectus amet quia
-              sapiente porro ipsam quo obcaecati quos ad rerum voluptatum
-              molestias eum quam perferendis voluptates consectetur placeat
-              nesciunt saepe necessitatibus ullam. Incidunt libero consequuntur
-              commodi similique esse ipsum voluptas, repudiandae numquam beatae
-              fugit minima?
-            </p>
-          </div>
-          <img src={womensec} className="ml-20 md:ml-0 w-[150px] md:w-[300px] object-cover mr-0 md:mr-20 " alt="" />
-        </div>
-        <div className="!flex flex-col md:flex-row justify-between  p-12 bg-purple-200 w-[80vh]">
-          <div className="!flex flex-col gap-y-8 p-12 mt-0 md:mt-20">
-            <h1 className="text-4xl ">Lorem ipsum dolor sit amet.</h1>
-            <p className="max-w-sm md:max-w-lg">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-              sint laudantium minus corrupti consequatur, delectus amet quia
-              sapiente porro ipsam quo obcaecati quos ad rerum voluptatum
-              molestias eum quam perferendis voluptates consectetur placeat
-              nesciunt saepe necessitatibus ullam. Incidunt libero consequuntur
-              commodi similique esse ipsum voluptas, repudiandae numquam beatae
-              fugit minima?
-            </p>
-          </div>
-          <img src={womenthird} className="ml-20 md:ml-0 w-[150px] md:w-[300px] object-cover mr-0 md:mr-20 " alt="" />
-        </div>
+        ))}
       </Slider>
     </div>
   );
