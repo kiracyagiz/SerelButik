@@ -23,19 +23,19 @@ const SliderComp = () => {
       image: women,
       bgColor: "bg-pink-200",
       title: "Özel İlk Slayt Başlığı",
-      content: "Buraya slayt içeriğini ekleyin.",
+      content: "Slayt içeriği burada.",
     },
     {
       image: womensec,
       bgColor: "bg-blue-200",
       title: "Özel İkinci Slayt Başlığı",
-      content: "Buraya slayt içeriğini ekleyin.",
+      content: "Slayt içeriği burada.",
     },
     {
       image: womenthird,
       bgColor: "bg-purple-200",
       title: "Özel Üçüncü Slayt Başlığı",
-      content: "Buraya slayt içeriğini ekleyin.",
+      content: "Slayt içeriği burada.",
     },
   ];
 
