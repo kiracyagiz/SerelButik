@@ -53,7 +53,7 @@ const ProductCard = () => {
   ];
 
   return (
-    <div className="ml-0 mt-12  md:ml-20">
+    <div className="ml-0 mt-12  md:ml-28">
       <Carousel
         responsive={responsive}
         swipeable={true}

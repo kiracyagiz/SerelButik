@@ -8,6 +8,7 @@ import selected3 from '../images/selected3.jpg'
 import selected4 from '../images/selected4.jpg'
 import ProductCard from './components/ProductCard';
 import bikini1 from '../images/bikini1.jpg'
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -78,6 +79,7 @@ const products = [
           </div>
         </div>       
         <ProductCard/>
+        <Footer/>
     
       </div>
     </>
